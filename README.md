@@ -12,56 +12,56 @@ Before you begin, ensure you have the following:
 
 ## Commands and Steps:
 
--Update and upgrade packages:
+- Update and upgrade packages:
 
 ```
     sudo apt-get update -y && sudo apt-get upgrade -y
 ```
--Install Docker:
+- Install Docker:
 
 ```
     sudo apt install docker.io -y
 ```
--Add your user to the docker group to avoid using sudo with Docker commands:
+- Add your user to the docker group to avoid using sudo with Docker commands:
 
 ```
     sudo usermod -aG docker ubuntu
 ```
--Clone your GitHub repository containing the Django Python web app code:
+- Clone your GitHub repository containing the Django Python web app code:
 
 ```
     git clone https://github.com/your-username/your-repo.git
 ```
--Build your Docker image using the Dockerfile in your repository:
+- Build your Docker image using the Dockerfile in your repository:
 
 ```
     docker build -t ghostiexd/django-python-webapp:latest .
 ```
--Check if the image was created:
+- Check if the image was created:
 
 ```
     docker images
 ```
--Run the Docker container, mapping port 8000:
+- Run the Docker container, mapping port 8000:
 
 ```
     docker run -it -p 8000:8000 ghostiexd/django-python-webapp:latest
 ```
--Your Django web app should now be accessible at
+- Your Django web app should now be accessible at
 
 ```
     http://<ec2-public-ip>:8000/demo/
 ```
--Log in to Docker Hub:
+- Log in to Docker Hub:
 
 ```
     docker login
 ```
--Push your Docker image to Docker Hub:
+- Push your Docker image to Docker Hub:
 
 ```
     docker push ghostiexd/django-python-webapp:latest
 ```
 ## Notes
 
--Customize and modify the Dockerfile to suit your application's requirements.
+- Customize and modify the Dockerfile to suit your application's requirements.
