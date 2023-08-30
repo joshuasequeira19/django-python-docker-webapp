@@ -10,7 +10,7 @@ Before you begin, ensure you have the following:
 - Make sure your EC2 security group allows inbound traffic on port 8000. (Add a custom tcp rule allowing anywhere traffic on port 8000)
 - A GitHub repository with your Django Python web app code.
 
-##Commands and Steps:
+## Commands and Steps:
 
 -Update and upgrade packages:
 
